@@ -131,7 +131,7 @@ const TodoLists = () => {
             const fetch = async () => {
                 await axios.get(`http://localhost:8000/api/v2/getTask/${id}`)
                     .then((res) => {
-                        setArray(res.data.list);
+                        setArray(res?.data?.list);
                         // console.log(new Date(res.data.list[0].createdAt).toISOString().split('T')[0]);
                     })
             }
@@ -160,7 +160,7 @@ const TodoLists = () => {
                 />
                 <div className='list-header text-white text-center'>
                     <h1>ListFlow</h1>
-                    <h2>Create Your To-do List Here . . .</h2>
+                    <h2>Create Your task List Here . . .</h2>
                 </div>
 
                 <div className='list-main container d-flex flex-column align-items-center gap-3'>
@@ -210,10 +210,10 @@ const TodoLists = () => {
                                         className='col-lg-3 my-2 d-flex justify-content-center align-items-center gap-3'
                                     >
                                         <TodoListBox
-                                            id={item._id}
-                                            title={item.title}
-                                            body={item.body}
-                                            taskDate={new Date(item.createdAt)}
+                                            id={item?._id}
+                                            title={item?.title}
+                                            body={item?.body}
+                                            taskDate={new Date(item?.createdAt)}
                                             deleteTaskId={deleteTask}
                                             displayEditModal={displayEditModal}
                                         />
