@@ -14,7 +14,7 @@ const Footer = () => {
                     Developed by <a href="" target='_blank' rel="noreferrer">Salauddin</a>
                 </div>
                 <div className='social-links'>
-                    <a href="" target='_blank' rel="noreferrer">
+                    <a href="https://github.com/Salauddin-Sajeeb/" target='_blank' rel="noreferrer">
                         GitHub <FiArrowUpRight />
                     </a>
                     <a href="" target='_blank' rel="noreferrer">
